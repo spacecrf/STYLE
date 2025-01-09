@@ -1,0 +1,540 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 120px;
+    height: auto;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Banner */
+.banner {
+    background-image: url('../assets/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 3em;
+    margin: 0;
+}
+
+.banner p {
+    color: white;
+    font-size: 1.2em;
+}
+
+.banner .btn-primary {
+    padding: 10px 20px;
+    background-color: #FF4C00;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+/* Sección de Bienvenida */
+.welcome {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.welcome h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.welcome .carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Sección de Bienvenida */
+.welcome .carousel img {
+    width: 50%; /* Ajusta el tamaño de las imágenes */
+    height: auto; /* Mantiene la proporción cuadrada */
+    display: none;
+    margin: 0 auto; /* Centra las imágenes horizontalmente */
+    object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor cuadrado sin deformarse */
+    transition: opacity 1s ease-in-out;
+}
+
+.welcome .carousel img.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto; /* Asegura que el footer esté al final */
+}
+
+.footer .social-media img {
+    height: 30px;
+    width: auto;
+    margin: 0 10px;
+}
+
+/* Llamadas a la Acción */
+.cta {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta .btn-primary {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #FF4C00;
+    color: white;
+}
+
+/* Estilos para los botones */
+.btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px; /* Bordes redondeados */
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+/* Botón primario y secundario con el mismo diseño */
+.btn-primary, .btn-secondary {
+    background-color: #3498db; /* Color azulado similar al del botón de enviar de la página contacto */
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: #2980b9; /* Color más oscuro al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de elevación */
+}
+
+
+/* Estilos para la página sobre nosotros */
+.about-section {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.about-info img {
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.cta-about {
+    margin-top: 30px;
+}
+
+.btn-primary {
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+.social-media a {
+    margin-right: 20px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Asegurarse que todas las páginas tengan el mismo diseño */
+.main-content {
+    flex-grow: 1;
+}
+
+/* Logo a la derecha en todas las páginas */
+.logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Header y Footer en todas las páginas */
+.header, .footer {
+    width: 100%;
+}
+
+/* Sección de contacto */
+.contact {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0056b3;
+    background-color: #fff;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #004494;
+}
+
+.contact-form button:active {
+    background-color: #003377;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .contact .container {
+        padding: 15px;
+    }
+    .contact h1 {
+        font-size: 2rem;
+    }
+    .contact-form label {
+        font-size: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
+}
+/* Sección del Asistente */
+.assistant {
+    background-color: #f0f0f0;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.assistant .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.assistant h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.assistant p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.assistant-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.assistant-form label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+.assistant-form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.assistant-form select:focus {
+    border-color: #0056b3;
+    background-color: #fff;
+    outline: none;
+}
+
+.assistant-form button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.assistant-form button:hover {
+    background-color: #004494;
+}
+
+.assistant-form button:active {
+    background-color: #003377;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .assistant .container {
+        padding: 15px;
+    }
+    .assistant h1 {
+        font-size: 2rem;
+    }
+    .assistant p {
+        font-size: 1rem;
+    }
+    .assistant-form label {
+        font-size: 1rem;
+    }
+    .assistant-form select {
+        font-size: 0.9rem;
+    }
+}
+#routineOutput {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+#routineDetails {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.services {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.services p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: scale(1.1); /* Aumento del tamaño al pasar el ratón */
+}
+
+.service-item img {
+    max-width: 90px; /* Aumenta aún más el tamaño de la imagen */
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item img:hover {
+    transform: scale(1.2); /* Efecto de hover más grande */
+}
+
+.service-item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+
